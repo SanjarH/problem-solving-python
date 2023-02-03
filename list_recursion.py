@@ -2,7 +2,7 @@
     Test Data: [1, 2, [3,4], [5,6]]
     Expected Result: 21 """
     
-# Solution    
+# Solution 1   
 def recurs_list(lst):
     count = 0
     for i in lst:
@@ -15,7 +15,7 @@ def recurs_list(lst):
 data = [1, 2, [3,4], [5,6]]
 print(recurs_list(data)) # Output -> 21
 
-# Solution using reduce function
+# Solution 2 using reduce function
 # The reduce function is used to compute a single value from a sequence by 
 # successively combining elements using a binary function and an optional initial value.
 from functools import reduce 
