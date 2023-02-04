@@ -19,8 +19,8 @@ def romanToInt(s):
     # use for loop for chcecking characters in range of lenths a string - s
     for i in range(len(s)):
         #check if chararter in s(string) is > 0 and is second charecter greater then previous character 
+         # if yes, subtract 2 times the value of the previous character and add to result
         if i > 0 and roman_dict[s[i]] > roman_dict[s[i - 1]]:
-            # if yes, subtract 2 times the value of the previous character and add to result  
             result += roman_dict[s[i]] - 2 * roman_dict[s[i - 1]]
         else:
             # if second character less then previous character add it to result
@@ -29,3 +29,20 @@ def romanToInt(s):
 # check
 print(romanToInt('MCMXCIV')) # output -> 1994
 print(romanToInt('DCIX')) # output -> 609
+
+# Solution 2 
+def romanToInt2(s: str) -> int:
+    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    result = 0
+    prev_value = 0
+    for c in s[::-1]:
+        curr_value = roman_dict[c]
+        if curr_value >= prev_value:
+            result += curr_value
+        else:
+            result -= curr_value
+        prev_value = curr_value
+    return result
+
+print(romanToInt2('MCMXCIV')) # output -> 1994
+print(romanToInt2('DCIX')) # output -> 609
