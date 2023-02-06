@@ -44,5 +44,5 @@ def romanToInt2(s: str) -> int:
         prev_value = curr_value
     return result
 
-print(romanToInt2('MCMXCIV')) # output -> 1994
+print(romanToInt2('MMMCMXCIX')) # output -> 1994
 print(romanToInt2('DCIX')) # output -> 609
