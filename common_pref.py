@@ -9,8 +9,9 @@ def longestCommonPrefix(strs):
         return ""
     output = "" # empty output
     shortest_str = min(strs, key=len) # get the shortest string in the list 
-    for i in range(len(shortest_str)): # check each characters of the shortest string 
-        if all(s[i] == shortest_str[i] for s in strs): # check if every string have the same character at index i 
+    for i in range(len(shortest_str)): # check each characters of the shortest string
+        # check if every string have the same character at index i 
+        if all(s[i] == shortest_str[i] for s in strs): 
             output += shortest_str[i]     # add character to output 
         else:
             break               # otherwise return empty output
