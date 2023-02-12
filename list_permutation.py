@@ -1,6 +1,7 @@
 # Learn Python together
-""" Given an array nums of distinct integers, return all the possible permutations. """
 
+""" Given an array nums of distinct integers, return all the possible permutations. 
+"""
 # Solution 1 using loop and recursive
 
 def permute(nums):
@@ -9,10 +10,14 @@ def permute(nums):
     result= [] # empty list
     # iteration through each item in the list
     for i in range(len(nums)):
-        lis = nums[i]  # giving value at index i in lis variable
-        new_list = nums[:i]+nums[i+1:] # giving in new list all elemts of the list exclude lis
-        for perm in permute(new_list): # recursive call function for creating permutation
-            result.append([lis]+perm) # add variables to result
+        # giving value at index i in lis variable
+        lis = nums[i]  
+        # giving in new list all elemts of the list exclude lis
+        new_list = nums[:i]+nums[i+1:] 
+        # recursive call function for creating permutation
+        for perm in permute(new_list): 
+            # add variables to result
+            result.append([lis]+perm) 
     return result
 
 #check 
