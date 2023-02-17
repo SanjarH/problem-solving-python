@@ -15,6 +15,6 @@ def mySqrt(x):
         return int(math.sqrt(x))
 # check    
 print(mySqrt(8)) # Output  -> 2
-print(mySqrt(-1)) # Output -> 0
+print(mySqrt(-1))# Output -> 0
 print(mySqrt(0)) # Output  -> 0
-print(mySqrt(999)) #Output -> 31
+print(mySqrt(999))# Output -> 31
