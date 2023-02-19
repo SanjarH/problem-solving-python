@@ -18,3 +18,21 @@ print(mySqrt(8)) # Output  -> 2
 print(mySqrt(-1))# Output -> 0
 print(mySqrt(0)) # Output  -> 0
 print(mySqrt(999))# Output -> 31
+
+# Solution 2 from LinkedIn follower
+def mySqrt2(x):
+    a, b = 0, x
+    x0 = 0
+    while abs(x0*x0 - x) > 0.001:
+        x0 = (a + b) / 2
+        if x0*x0 > x:
+            b = x0
+        else:
+            a = x0
+    return int(x0)
+
+print(mySqrt2(8)) # Output  -> 2
+print(mySqrt2(-1))# Output -> 0
+print(mySqrt2(0)) # Output  -> 0
+print(mySqrt2(999))# Output -> 31
+
