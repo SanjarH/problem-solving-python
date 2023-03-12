@@ -37,3 +37,4 @@ print(fibonacci2(42))
 print(fibonacci2(12)) # Output -> 144
 print(fibonacci2(-11)) # Output -> 0
 print(fibonacci2(6)) # Output -> 8
+
